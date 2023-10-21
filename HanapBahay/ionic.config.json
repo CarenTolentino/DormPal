@@ -1,0 +1,7 @@
+{
+  "name": "HanapBahay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
