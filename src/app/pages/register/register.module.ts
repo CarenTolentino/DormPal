@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RegisterPageRoutingModule } from './register-routing.module';
 
 import { RegisterPage } from './register.page';
+import { SignUpComponent } from 'src/app/components/sign-up/sign-up.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { RegisterPage } from './register.page';
     FormsModule,
     IonicModule,
     RegisterPageRoutingModule
+    
   ],
-  declarations: [RegisterPage]
+  declarations: [RegisterPage, SignUpComponent]
 })
 export class RegisterPageModule {}
