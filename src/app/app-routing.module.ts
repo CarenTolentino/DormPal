@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'logo',
     pathMatch: 'full'
   },
   {
@@ -22,7 +22,8 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
-  },  {
+  },
+  {
     path: 'number',
     loadChildren: () => import('./forgotpass/number/number.module').then( m => m.NumberPageModule)
   },
