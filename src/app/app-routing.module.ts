@@ -22,7 +22,19 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+  },  {
+    path: 'number',
+    loadChildren: () => import('./forgotpass/number/number.module').then( m => m.NumberPageModule)
   },
+  {
+    path: 'code',
+    loadChildren: () => import('./forgotpass/code/code.module').then( m => m.CodePageModule)
+  },
+  {
+    path: 'change',
+    loadChildren: () => import('./forgotpass/change/change.module').then( m => m.ChangePageModule)
+  },
+
 ];
 
 @NgModule({

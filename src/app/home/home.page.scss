@@ -1,27 +1,19 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.line {
+  color: black;
+  font-weight: bold;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+ion-footer {
+  position: fixed;
+  bottom: 0;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+#guide {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #50c8ff;
 }

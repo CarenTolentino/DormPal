@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container strong {
+  font-size: 20px;
+  line-height: 26px;
+  color: #1dc3d9;
+}
+.container p {
+  margin: 0px;
+}
+.round-input {
+  ion-input {
+    margin-left: 10px;
+  }
+}
+ion-item {
+  width: 80%;
+  height: 100%;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ion-content {
+  --ion-background-color: linear-gradient(to bottom, #B0E7EE, #75E4F2);
+}
