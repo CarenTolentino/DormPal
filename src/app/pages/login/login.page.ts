@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements AfterViewInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngAfterViewInit() {
     const sign_in_btn = document.querySelector("#sign-in-btn");
@@ -19,6 +20,12 @@ export class LoginPage implements AfterViewInit {
       sign_in_btn.addEventListener("click", () => {
       });
     }
+  }
+
+  login() {
+    this.http.get('https://dormpal.000webhostapp.com/getlogin.php').subscribe((response) => {
+      console.log(response)
+    })
   }
 
   register() {

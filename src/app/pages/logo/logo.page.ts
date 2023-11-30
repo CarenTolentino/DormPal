@@ -11,9 +11,8 @@ export class LogoPage implements OnInit {
 
   ngOnInit() {
     setTimeout( () => {
-      this.router.navigateByUrl('./login');
-
-    }, 3000);
+      this.router.navigate(['login']);
+    }, 1000);
   }
 
 }
