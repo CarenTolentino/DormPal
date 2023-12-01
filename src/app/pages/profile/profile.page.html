@@ -1,13 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
+<ion-header>
+  <ion-buttons slot="start" class="back-button">
+    <ion-back-button defaultHref="/" color="light"></ion-back-button>
+  </ion-buttons>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <strong>Enter New Password</strong>
+    <ion-item class="round-input" color="dark">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-input 
+      aria-label="Password" 
+      type="password" 
+      placeholder="Password">
+      </ion-input>
+    </ion-item>
+    <ion-item class="round-input-2" color="dark">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-input 
+      aria-label="Confirm Password" 
+      type="password" 
+      placeholder="Confirm Password">
+      </ion-input>
+    </ion-item>
+    <ion-button shape="round" color="primary">
+      Confirm
+    </ion-button>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div id="guide">
+      <a><ion-icon name="map" size="large" color="dark"></ion-icon></a>
+      <a><ion-icon name="home" size="large" color="dark"></ion-icon></a>
+      <a><ion-icon name="person-circle" size="large" color="dark"></ion-icon></a>
+    </div>
+  </ion-toolbar>
+</ion-footer>
