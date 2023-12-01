@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, NgModule, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -32,7 +32,33 @@ export class LoginPage implements AfterViewInit {
   }
 
   loginSubmit() {
-    console.log(this.login.value)
+
+    var data = JSON.stringify(this.login.value)
+
+
+    const headers = new HttpHeaders();
+    headers.set('Content-Type', 'application/json; charset=UTF-8');
+    headers.set('Access-Control-Allow-Origin', '*');
+    headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+
+    this.httpClient.post('https://dormpal.000webhostapp.com/login.php', data, {headers: headers}).subscribe((response) => {
+      console.log(response)
+    })
+
+    // this.httpClient.post('https://dormpal.000webhostapp.com/login.php', data, {headers: headers}).subscribe((res) => {
+    //   console.log("Posted successfully")
+    //   console.log(res);
+    // }, (err) => {
+    //   console.log(err.error);
+    // });
+    
+    // console.log(this.login.value)
+    // this.httpClient.post('https://dormpal.000webhostapp.com/login.php ', data).subscribe((res) => {
+    //   console.log("Posted successfully")
+    //   console.log(res);
+    // }, (err) => {
+    //   console.log(err.error);
+    // })
   }
 
   register() {
