@@ -30,11 +30,7 @@ const routes: Routes = [
   {
     path: 'change',
     loadChildren: () => import('./forgotpass/change/change.module').then( m => m.ChangePageModule)
-  },  {
-    path: 'dormprofile',
-    loadChildren: () => import('./dormprofile/dormprofile.module').then( m => m.DormprofilePageModule)
-  },
-
+  }
 
 ];
 
