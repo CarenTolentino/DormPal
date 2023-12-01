@@ -31,7 +31,14 @@ const routes: Routes = [
     path: 'change',
     loadChildren: () => import('./forgotpass/change/change.module').then( m => m.ChangePageModule)
   },
-
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
 ];
 
 @NgModule({
