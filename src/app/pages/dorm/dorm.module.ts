@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DormprofilePageRoutingModule } from './dormprofile-routing.module';
+import { DormPageRoutingModule } from './dorm-routing.module';
 
-import { DormprofilePage } from './dormprofile.page';
+import { DormPage } from './dorm.page';
 import { ImageCarouselComponent } from '../image-carousel/image-carousel.component';
 
 @NgModule({
@@ -14,8 +14,8 @@ import { ImageCarouselComponent } from '../image-carousel/image-carousel.compone
     CommonModule,
     FormsModule,
     IonicModule,
-    DormprofilePageRoutingModule
+    DormPageRoutingModule
   ],
-  declarations: [DormprofilePage, ImageCarouselComponent]
+  declarations: [DormPage, ImageCarouselComponent,]
 })
-export class DormprofilePageModule {}
+export class DormPageModule {}

@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: PagesPage
+  },  {
+    path: 'dorm',
+    loadChildren: () => import('./dorm/dorm.module').then( m => m.DormPageModule)
   },
+
 ];
 
 @NgModule({
