@@ -1,13 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>pages</ion-title>
+    <ion-title>Dorm Profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">pages</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-slides pager="True">
+    <ion-slide *ngFor="let image of dormImages">
+    <img src="images" alt="">
+    </ion-slide>
+  </ion-slides>
+
 </ion-content>

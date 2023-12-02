@@ -44,10 +44,6 @@ const routes: Routes = [
     path: 'create',
     loadChildren: () => import('./pages/create/create.module').then( m => m.CreatePageModule)
   },
-  {
-    path: 'dorm', 
-    loadChildren: () => import('./pages/dorm/dorm.module').then( m => m.DormPageModule)
-  },
 ];
 
 @NgModule({
