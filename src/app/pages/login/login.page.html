@@ -8,14 +8,13 @@
     <div class="forms-container">
       <div class="signin-signup">
         <div class="bubble"></div>
-        <!---Sign Up Form-->
         <form class="sign-in-form" [formGroup] = "login" (ngSubmit) = "loginSubmit()" novalidate>
           <!--ion-img src="" class="image1"></ion-img---> 
           <h2 class="title">Login</h2>
 
           <div class="input-field" >
             <ion-icon name="call-outline" class="icon-left" ></ion-icon>
-            <ion-input type="text" formControlName="number" placeholder="Phone Number" class=".input-with-icon"></ion-input>
+            <ion-input type="number" formControlName="number" placeholder="Phone Number" class=".input-with-icon"></ion-input>
           </div>
           <div class="input-field" >
             <ion-icon name="lock-closed-outline" class="icon-left" ></ion-icon>
