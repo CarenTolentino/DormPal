@@ -2,6 +2,7 @@ import { AfterViewInit, Component, NgModule, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -13,11 +14,23 @@ export class LoginPage implements AfterViewInit {
 
   login: FormGroup;
 
-  constructor(private router: Router, private httpClient: HttpClient, public formBuilder: FormBuilder) { 
+  constructor(private router: Router, private httpClient: HttpClient, public formBuilder: FormBuilder, private alertController:AlertController) { 
     this.login = this.formBuilder.group({
       number:[''],
       password:['']
     })
+  }
+
+  async presentAlert(alertHeader:string, alertMessage:string, alertButtons?:any){
+    let button = 'RETURN'
+    if (alertButtons != null) button = alertButtons
+    const alert = await this.alertController.create({
+      header : alertHeader,
+      message: alertMessage,
+      buttons: [button]
+    })
+
+    await alert.present()
   }
 
   ngAfterViewInit() {
@@ -43,6 +56,11 @@ export class LoginPage implements AfterViewInit {
 
     this.httpClient.post('https://dormpal.000webhostapp.com/login.php', data, {headers: headers}).subscribe((response) => {
       console.log(response)
+      if(response == 'l01') {
+        this.presentAlert("Success","Successfully Signed Up!","Proceed to Log In")
+      }
+      if(response == 'l02') this.presentAlert("ERROR","Incorrect Password.")
+      if(response == 'l03') this.presentAlert("ERROR","User not Found.")
     })
 
     // this.httpClient.post('https://dormpal.000webhostapp.com/login.php', data, {headers: headers}).subscribe((res) => {
