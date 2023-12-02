@@ -32,10 +32,17 @@ const routes: Routes = [
     loadChildren: () => import('./forgotpass/change/change.module').then( m => m.ChangePageModule)
   },
   {
-    path: 'dorm',
-    loadChildren: () => import('./pages/dorm/dorm.module').then( m => m.DormPageModule)
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
-
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'create',
+    loadChildren: () => import('./pages/create/create.module').then( m => m.CreatePageModule)
+  },
 ];
 
 @NgModule({
