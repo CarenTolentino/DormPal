@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'create',
     loadChildren: () => import('./pages/create/create.module').then( m => m.CreatePageModule)
   },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
 ];
 
 @NgModule({
