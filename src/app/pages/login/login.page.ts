@@ -22,8 +22,7 @@ export class LoginPage implements AfterViewInit {
 
   ngAfterViewInit() {
     const sign_in_btn = document.querySelector("#sign-in-btn");
-    const sign_up_btn = document.querySelector("#sign-up-btn");
-  
+    
   
     if (sign_in_btn) {
       sign_in_btn.addEventListener("click", () => {
@@ -32,9 +31,10 @@ export class LoginPage implements AfterViewInit {
   }
 
   loginSubmit() {
-
+    
     var data = JSON.stringify(this.login.value)
-
+    
+    console.log(data)
 
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json; charset=UTF-8');
