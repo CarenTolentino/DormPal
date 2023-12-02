@@ -1,0 +1,15 @@
+ion-content {
+  --ion-background-color: linear-gradient(to bottom, #75E4F2, #B0E7EE);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
