@@ -7,38 +7,35 @@
   <div class="container">
     <div class="forms-container">
       <div class="signin-signup">
-        
-        <!---Sign Up Form-->
-        <form class="sign-in-form">
-          <!--ion-img src="" class="image1"></ion-img---> 
+        <form class="sign-in-form" [formGroup] = "register" (ngSubmit) = "registerSubmit()" novalidate>
           <h2 class="title">Sign Up</h2>
           <div class="name">
             <div class="input-field half-width" >
-              <ion-input type="text" placeholder="First Name" class=".input-with-icon"></ion-input>
+              <ion-input type="text" formControlName="fname" placeholder="First Name" class=".input-with-icon"></ion-input>
             </div>
             <div class="input-field half-width" >
-              <ion-input type="text" placeholder="Last Name" class=".input-with-icon"></ion-input>
+              <ion-input type="text" formControlName="lname" placeholder="Last Name" class=".input-with-icon"></ion-input>
             </div>
           </div>
           <div class="input-field" >
             <ion-icon name="call-outline" class="icon-left" ></ion-icon>
-            <ion-input type="text" placeholder="Phone Number" class=".input-with-icon"></ion-input>
+            <ion-input type="text" formControlName="number" placeholder="Phone Number" class=".input-with-icon"></ion-input>
           </div>
           <div class="input-field" >
             <ion-icon name="lock-closed-outline" class="icon-left" ></ion-icon>
-            <ion-input type="password" placeholder="Password" class=".input-with-icon"></ion-input>
+            <ion-input type="password" formControlName="pword" placeholder="Password" class=".input-with-icon"></ion-input>
           </div>
           <div class="input-field">
             <ion-icon name="lock-closed-outline" class="icon-left"></ion-icon>
-            <ion-input type="password" placeholder="Confirm Password" class=".input-with-icon"></ion-input>
+            <ion-input type="password" formControlName="pwordC" placeholder="Confirm Password" class=".input-with-icon"></ion-input>
           </div>
           <div class="input-field custom-select">
             <ion-icon name="person-circle-outline" class="icon-left"></ion-icon>
             <div class="select-wrapper">
-              <select>
-                <option value="option1">Landlord</option>
-                <option value="option2">Boarder</option>
-              </select>
+              <ion-select placeholder = "User Type" interface="popover" formControlName = "usertype" class = "select">
+                <ion-select-option class = "select" value = "tenant">Tenant</ion-select-option>
+                <ion-select-option class = "select" value = "landlord">Landlord</ion-select-option>
+              </ion-select>
             </div>
           </div>
 
