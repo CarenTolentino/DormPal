@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.page.html',
-  styleUrls: ['./create.page.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.page.html',
+  styleUrls: ['./dashboard.page.scss'],
 })
-export class CreatePage implements OnInit {
+export class DashboardPage implements OnInit {
 
   @ViewChild('fileInput') fileInput!: ElementRef;
 
@@ -21,7 +22,15 @@ export class CreatePage implements OnInit {
     // You can perform additional actions, such as uploading the file to a server.
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  goToCreate() {
+    this.router.navigate(['create'])
+  }
+
+  goToProfile() {
+    this.router.navigate(['profile'])
+  }
 
   ngOnInit() {
   }
