@@ -23,5 +23,13 @@
         </ion-input>
       </ion-item>
     </div>
+
+    <div class="container-3">
+      <ion-button (click)="handleUploadClick()" class="upload-button">
+        <ion-icon name="images"></ion-icon>
+        <strong>Upload Image</strong>
+      </ion-button>
+      <input type="file" #fileInput style="display: none;" (change)="handleFileChange($event)" />
+    </div>
   </ion-content>
   
