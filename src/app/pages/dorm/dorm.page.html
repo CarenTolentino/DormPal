@@ -1,23 +1,24 @@
+<ion-content>
+  <div class="container">
+    <div class="iphone">
+      <div class="header">
+        <div class="order-summary">
+          <div class="dorm-name">
+            TONTON's INN
+          </div>
+          <div class="short-desc">
+            A resting paradise
+          </div>
+        </div>
+        <div class="action-btn">
+          <div class="back-btn"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+        </div>
+      </div>
+      <div class="hero-img-container">
+        <img src="../assets/DSC09486.png" class="hero-img">
+      </div>
 
-
-<ion-content scrollY="false">
-    <swiper-container
-    #swiper
-        (afterinit)="swiperReady()"
-        (slidechange)="swiperSlideChanged($event)"
-        [loop]="true"
-        [pagination]="true"
-        [zoom]="true"
-        style="height: 100vh;"
-    >
-        <swiper-slide *ngFor="let image of images">
-            <div class="swiper-zoom-container">
-                <img [src]="image" />
-            </div>
-         </swiper-slide>
-    </swiper-container>
-
-    <div class="order-details-container">
+      <div class="order-details-container">
         <div class="odc-header">
         <div class="cta-text">See service details</div>
         <div class="cta-button-container">
@@ -53,6 +54,9 @@
         <a><div class="cancellation">
           Request Cancellation
           </div></a>
+          <a><div class="cancellation">
+            Request Cancellation
+            </div></a>
         <div class="shipping-desc">Your Address</div>
         
         <div class="shipping-address">
@@ -64,6 +68,6 @@
         </div>
       </div>
     </div>
-
-
+  </div>
+  <script src="node_modules/animejs/lib/anime.min.js"></script>
 </ion-content>
