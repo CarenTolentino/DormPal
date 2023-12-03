@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-create',
@@ -8,17 +7,24 @@ import { ElementRef, ViewChild } from '@angular/core';
 })
 export class CreatePage implements OnInit {
 
-  @ViewChild('fileInput') fileInput!: ElementRef;
+  selectedImages: any[] = [];
 
-  handleUploadClick() {
-    this.fileInput.nativeElement.click();
+  onFilesSelected(event: any) {
+    const files = event.target.files;
+    if (files) {
+      this.readFiles(files);
+    }
   }
 
-  handleFileChange(event: any) {
-    const selectedFile = event.target.files[0];
-    console.log('Selected file:', selectedFile.name);
-
-    // You can perform additional actions, such as uploading the file to a server.
+  private readFiles(files: FileList) {
+    for (let i = 0; i < Math.min(files.length, 3); i++) {
+      const file = files[i];
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.selectedImages.push(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   }
 
   constructor() { }

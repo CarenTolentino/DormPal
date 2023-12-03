@@ -1,6 +1,5 @@
 import {Component, ElementRef, ViewChild, OnInit, AfterViewInit} from '@angular/core';
 import Swiper from 'swiper';
-import anime from 'animejs/lib/anime.es.js';
 
 @Component({
   selector: 'app-dorm',
@@ -56,51 +55,8 @@ export class DormPage implements OnInit, AfterViewInit {
             this.cta_button_show.play();
           }
         });
-    
-        this.cta_button_show = anime({
-          targets: ['.cta-button', '.cta-text'],
-          translateY: ['-15', '0'],
-          opacity: ['0', '1'],
-          easing: 'easeInOutSine',
-          delay: anime.stagger(200),
-          autoplay: false,
-          duration: 500,
-          complete: () => {}
-        });
-    
-        this.cta_button_hide = anime({
-          targets: ['.cta-button', '.cta-text'],
-          translateY: ['0', '-15'],
-          opacity: ['1', '0'],
-          easing: 'easeInOutSine',
-          delay: anime.stagger(200),
-          autoplay: false,
-          duration: 500,
-          complete: () => {
-            this.slideup.play();
-            this.drawer_open = true;
-          }
-        });
-    
-        this.slidedown = anime({
-          targets: '.order-details-container',
-          translateY: ['-560', '-40px'],
-          duration: 1000,
-          autoplay: false,
-          begin: () => {
-            this.show_hideCTA("block");
-            this.drawer_open = false;
-          }
-        });
-    
-        this.slideup = anime({
-          targets: '.order-details-container',
-          translateY: ['-40px', '-560px'],
-          autoplay: false,
-          begin: () => {
-            this.show_hideCTA("none");
-          }
-        });
+
+       
       }
     
       show_hideCTA(param: string) {

@@ -4,6 +4,17 @@ ion-footer {
   border: none;
 }
 
+ion-content {
+  --ion-background-color: #ffff;
+}
+
+.container-2 {
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+  }
+}
+
 #guide {
   height: 55px;
   display: flex;
@@ -15,15 +26,13 @@ ion-footer {
   background-color: #B0E7EE;
 }
 
-ion-content {
-  --ion-background-color: #ffff;
-}
-
 .container {
-  strong {
+  p {
     font-size: 24px;
     padding: 50px;
     color: #1591a1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
   }
 }
 
@@ -81,8 +90,4 @@ ion-content {
   margin-bottom: 10px;
     }
   }
-}
-
-ion-icon {
-  cursor: pointer;
 }
