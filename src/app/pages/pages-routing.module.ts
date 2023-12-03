@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: PagesPage
+  },  {
+    path: 'gpstest',
+    loadChildren: () => import('./gpstest/gpstest.module').then( m => m.GpstestPageModule)
   },
+
   
 
 ];

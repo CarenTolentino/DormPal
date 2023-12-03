@@ -37,11 +37,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
   {
-
-    path: 'dashboard',
-    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
-  },
-  {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
@@ -54,6 +49,10 @@ const routes: Routes = [
     path: 'dorm',
     loadChildren: () => import('./pages/dorm/dorm.module').then( m => m.DormPageModule)
   },
+  {
+    path: 'gps',
+    loadChildren: () => import('./pages/gpstest/gpstest.module').then( m => m.GpstestPageModule)
+  }
 
 ];
 
