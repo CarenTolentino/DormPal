@@ -1,19 +1,4 @@
-<ion-header>
-    <ion-toolbar color="primary">
-        <ion-title>Ionic Swiper</ion-title>
-        <ion-buttons slot="end">
-            <ion-button (click)="goPrev()">
-                <ion-con slot="icon-only" name="arrow-back"></ion-con>
-            </ion-button>
-            <ion-button (click)="goNext()">
-                <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
-            </ion-button>
-            <ion-button (click)="goNext()">
-                <ion-icon slot="icon-only" name="arrow"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
+
 
 <ion-content scrollY="false">
     <swiper-container
@@ -23,7 +8,7 @@
         [loop]="true"
         [pagination]="true"
         [zoom]="true"
-        style="height: 35vh;"
+        style="height: 100vh;"
     >
         <swiper-slide *ngFor="let image of images">
             <div class="swiper-zoom-container">
@@ -32,7 +17,53 @@
          </swiper-slide>
     </swiper-container>
 
-    <h1>TOMTOM'S INN</h1>
+    <div class="order-details-container">
+        <div class="odc-header">
+        <div class="cta-text">See service details</div>
+        <div class="cta-button-container">
+          <button class="cta-button">View</button>
+        </div>
+        </div>
+        <div class="odc-wrapper">
+        <div class="odc-header-line">
+          Your order details
+        </div>
+        <div class="odc-header-details">
+          Your product details (order 040-904-790)
+        </div>
+        <div class="product-container">
+          <div class="product">
+            <div class="product-photo">
+              <img src="../assets/3d-cleaning.png" class="img-photo">
+            </div>
+            <div class="product-desc">
+              <span>First Service</span>
+              <span>Area Cleaning </span>
+            </div>
+          </div><div class="product">
+            <div class="product-photo">
+              <img src="../assets/3d-plumbing.png" class="img-photo2">
+            </div>
+            <div class="product-desc">
+              <span>Second Service</span>
+              <span>Plumbing</span>
+            </div>
+          </div>
+        </div>
+        <a><div class="cancellation">
+          Request Cancellation
+          </div></a>
+        <div class="shipping-desc">Your Address</div>
+        
+        <div class="shipping-address">
+          Red Bldg.<br>
+          Universe 2, Golden Country Homes<br>
+          Alangilan<br>
+          BATANGAS
+        </div>
+        </div>
+      </div>
+    </div>
 
 
 </ion-content>
