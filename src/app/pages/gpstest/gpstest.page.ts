@@ -45,6 +45,15 @@ export class GpstestPage implements OnInit {
         mapId: 'c7128929d247ddf2'
       },
     })
+
+    this.newMap.addMarker({
+      coordinate: ({
+        lat: 13.897814264363909,
+        lng: 121.05081769303631
+      }),
+      title: "TESTMARKER",
+      snippet:"testsnippet"
+    })
   }
 
 
