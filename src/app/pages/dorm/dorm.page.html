@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Ionic Swiper</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="goPrev()">
+                <ion-con slot="icon-only" name="arrow-back"></ion-con>
+            </ion-button>
+            <ion-button (click)="goNext()">
+                <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+            </ion-button>
+            <ion-button (click)="goNext()">
+                <ion-icon slot="icon-only" name="arrow"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content scrollY="false">
+    <swiper-container
+    #swiper
+        (afterinit)="swiperReady()"
+        (slidechange)="swiperSlideChanged($event)"
+        [loop]="true"
+        [pagination]="true"
+        [zoom]="true"
+        style="height: 35vh;"
+    >
+        <swiper-slide *ngFor="let image of images">
+            <div class="swiper-zoom-container">
+                <img [src]="image" />
+            </div>
+         </swiper-slide>
+    </swiper-container>
+
+    <h1>TOMTOM'S INN</h1>
+
+
+</ion-content>

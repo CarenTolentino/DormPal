@@ -1,16 +1,16 @@
-.container2{
-    padding:3rem 0rem;
-    padding-top: 1.5vh;
-
-    strong{
-        font-size: x-large;
-        padding-left: 1.2rem;
-        letter-spacing: 0.5px;
-    }
+swiper-container{
+    width: 100%;
+    height: 100%;
+    --swiper-pagination-bullet-inactive-color:var(--ion-color-step-200, #cccccc);
+    --swiper-pagination-color:var(--ion-color-primary, #3880ff);
 }
-
-.vouchers-header{
+swiper-slide{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center ;
 }
+body {
+    background-color: #e0e0e0;
+}
+

@@ -37,6 +37,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
   {
+
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
@@ -45,9 +46,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
+
     path: 'create',
     loadChildren: () => import('./pages/create/create.module').then( m => m.CreatePageModule)
   },
+  {
+    path: 'dorm',
+    loadChildren: () => import('./pages/dorm/dorm.module').then( m => m.DormPageModule)
+  },
+
 ];
 
 @NgModule({
