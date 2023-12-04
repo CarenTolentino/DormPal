@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
-import { GoogleMap } from '@capacitor/google-maps';
+import { GoogleMap, Marker } from '@capacitor/google-maps';
 import { Geolocation } from '@capacitor/geolocation';
 
 
@@ -45,17 +45,21 @@ export class GpstestPage implements OnInit {
         mapId: 'c7128929d247ddf2'
       },
     })
-
-    this.newMap.addMarker({
+    const marker:Marker = {
       coordinate: ({
         lat: 13.897814264363909,
         lng: 121.05081769303631
       }),
       title: "TESTMARKER",
       snippet:"testsnippet"
-    })
-  }
+    }
 
+    await this.newMap.addMarker(marker)
+    this.newMap.setOnMarkerClickListener(async(marker) => {
+      console.log(marker.title)
+    })
+
+  }
 
 }
 
