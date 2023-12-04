@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import Swiper from 'swiper';
 import anime from 'animejs/lib/anime.es.js';
 
@@ -14,8 +14,9 @@ export class DormPage implements OnInit, AfterViewInit {
   slidedown: any;
   slideup: any;
 
-  @ViewChild('swiper')
-  swiperRef: ElementRef | undefined;
+  @ViewChild('swiperContainer') swiperRef: ElementRef | undefined;
+
+
   swiper?: Swiper;
 
   images = [
@@ -24,27 +25,27 @@ export class DormPage implements OnInit, AfterViewInit {
     '../assets/DSC09582.png'
   ];
 
-  constructor() {}
-
-  swiperReady() {
-    this.swiper = this.swiperRef?.nativeElement.swiper;
-}
-
-  goNext() {
-    this.swiper?.slideNext();
-  }
-
-  goPrev() {
-    this.swiper?.slidePrev();
-  }
-
-  swiperSlideChanged(e: any) {
-    console.log('changed: ', e);
-  }
-
   ngOnInit() {}
-
+  swiperReady() {
+    // Initialize Swiper when the view is ready
+    this.swiper = new Swiper('.swiper-container', {
+      // Swiper configuration options
+      // You can customize these options based on your needs
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  } 
   ngAfterViewInit() {
+    this.initSwiper();
+
     const ctaButton = document.querySelector('.cta-button') as HTMLElement;
     const backButton = document.querySelector('.back-btn') as HTMLElement;
 
@@ -60,7 +61,7 @@ export class DormPage implements OnInit, AfterViewInit {
     });
 
     this.cta_button_show = anime({
-      targets: ['.cta-button', '.cta-text',],
+      targets: ['.cta-button', '.cta-text'],
       translateY: ['-15', '0'],
       opacity: ['0', '1'],
       easing: 'easeInOutSine',
@@ -71,7 +72,7 @@ export class DormPage implements OnInit, AfterViewInit {
     });
 
     this.cta_button_hide = anime({
-      targets: ['.cta-button', '.cta-text',],
+      targets: ['.cta-button', '.cta-text'],
       translateY: ['0', '-15'],
       opacity: ['1', '0'],
       easing: 'easeInOutSine',
@@ -101,6 +102,21 @@ export class DormPage implements OnInit, AfterViewInit {
       autoplay: false,
       begin: () => {
         this.show_hideCTA('none');
+      },
+    });
+  }
+
+  initSwiper() {
+    this.swiper = new Swiper(this.swiperRef?.nativeElement, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
       },
     });
   }

@@ -15,9 +15,21 @@
         </div>
       </div>
       <div class="hero-img-container">
-        <img src="../assets/DSC09486.png" class="hero-img">
+        <div class="slideshow-backdrop">
+          <div #swiperContainer class="swiper-container" (swiper)="swiperReady()">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" *ngFor="let image of images">
+                <img [src]="image" alt="Image" class="swiper-img">
+              </div>
+            </div>
+            <!-- Add Navigation Buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </div>
-
       <div class="order-details-container">
         <div class="odc-header">
         <div class="cta-text">See service details</div>
@@ -41,7 +53,8 @@
               <span>First Service</span>
               <span>Area Cleaning </span>
             </div>
-          </div><div class="product">
+          </div>
+          <div class="product">
             <div class="product-photo">
               <img src="../assets/3d-plumbing.png" class="img-photo2">
             </div>
@@ -67,6 +80,7 @@
         </div>
         </div>
       </div>
+
     </div>
   </div>
   <script src="node_modules/animejs/lib/anime.min.js"></script>

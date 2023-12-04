@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
 
-
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -423,3 +422,60 @@ a {
     color: #1e57b4;
     border-bottom-color: #1e57b4;
 }
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: orange;
+}
+
+ion-content {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-color: #CFDBEA;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.slideshow-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send it to the back */
+}
+
+
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
