@@ -59,6 +59,20 @@ export class GpstestPage implements OnInit {
       console.log(marker.title)
     })
 
+    const marker2:Marker = {
+      coordinate: ({
+        lat: 13.898599005368059, 
+        lng: 121.05230946168108
+      }),
+      title: "TESTMARKER2",
+      snippet:"testsnippet"
+    }
+
+    await this.newMap.addMarker(marker2)
+    this.newMap.setOnMarkerClickListener(async(marker2) => {
+      console.log(marker2.title)
+    })
+
   }
 
 }
