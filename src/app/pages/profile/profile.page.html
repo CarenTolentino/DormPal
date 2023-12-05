@@ -1,28 +1,48 @@
-<ion-header>
-  <ion-buttons slot="start" class="back-button">
-    <ion-back-button defaultHref="/" color="light"></ion-back-button>
-  </ion-buttons>
-</ion-header>
+<ion-content>
+  <div class="main_content_div">
+    <ion-buttons slot="start" class="back-button">
+      <ion-back-button defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
 
-<ion-content [fullscreen]="true">
-  
-  <div class="container">
-    <h1 class="black-text" style="color: black;">Caren Tolentino</h1>
-    <h2 class="black-text" style="color: black;">Boarder</h2>
+    <div class="user_div">
+      <div class="first_div">
+        <ion-label class="username">Caren Tolentino</ion-label>
+        <ion-label class="user_type">Boarder</ion-label>
+      </div>
+
+      <div class="user_back" [style.backgroundImage]="'url(assets/prespic.png)'"></div>
+    </div>
+
+    <div class="content_div">
+      <div class="test_details">
+
+        <div class="list_div">
+          <ion-label>Edit Profile</ion-label>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+
+        <div class="list_div">
+          <ion-label>Change Password</ion-label>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+
+        <div class="list_div">
+          <ion-label>Change Number</ion-label>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+
+        <div class="list_div">
+          <ion-label>About</ion-label>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+
+        <div class="list_div">
+          <ion-label>Help</ion-label>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="options">
-    <h3 class="black-text" style="color: black;">Edit Name</h3>
-    <h3 class="black-text" style="color: black;">Change Password</h3>
-    <h3 class="black-text" style="color: black;">Change Number</h3>
-    <h3 class="black-text" style="color: black;">About</h3>
-    <h3 class="black-text" style="color: black;">Help</h3>
-  </div>
-  <div class="buttons">
-    <button type="button">
-    </button>
-  </div>
-  
-  
 </ion-content>
 
 <ion-footer>
