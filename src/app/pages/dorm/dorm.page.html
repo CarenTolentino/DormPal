@@ -7,72 +7,72 @@
             TONTON's INN
           </div>
           <div class="short-desc">
-            A resting paradise
+            of Oliver Luis Aromin
           </div>
         </div>
         <div class="action-btn">
-          <div class="back-btn"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+          <div class="back-btn"><ion-icon name="close-outline"></ion-icon></div>
         </div>
       </div>
       <div class="hero-img-container">
-        <div class="slideshow-backdrop">
-          <div #swiperContainer class="swiper-container" (swiper)="swiperReady()">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide" *ngFor="let image of images">
-                <img [src]="image" alt="Image" class="swiper-img">
-              </div>
-            </div>
-            <!-- Add Navigation Buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
+        <!--Input an Image here, I already remove the swiper element-->
+        <img src="./assets/cadena_b.png" class="hero-img" alt="">
       </div>
-      <div class="order-details-container">
-        <div class="odc-header">
-        <div class="cta-text">See service details</div>
+      <div class="dorm-details-container">
+        <div class="ddc-header">
+        <div class="cta-text">See dormitory details</div>
         <div class="cta-button-container">
           <button class="cta-button">View</button>
         </div>
         </div>
-        <div class="odc-wrapper">
-        <div class="odc-header-line">
-          Your order details
+        <div class="ddc-wrapper">
+        <div class="ddc-header-line">
+          Dormitory Details
         </div>
-        <div class="odc-header-details">
-          Your product details (order 040-904-790)
+        <div class="ddc-header-details">
+          Features
         </div>
-        <div class="product-container">
-          <div class="product">
-            <div class="product-photo">
-              <img src="../assets/3d-cleaning.png" class="img-photo">
-            </div>
-            <div class="product-desc">
-              <span>First Service</span>
-              <span>Area Cleaning </span>
+        <div class="details-container">
+          <div class="details">
+            <div class="details-desc">
+              <span>Details and Utilities</span>
+              <span>Single-Storey </span>
             </div>
           </div>
-          <div class="product">
-            <div class="product-photo">
-              <img src="../assets/3d-plumbing.png" class="img-photo2">
+          <div class="details">
+            <div class="details-desc">
+              <span>Kitchen</span>
             </div>
-            <div class="product-desc">
-              <span>Second Service</span>
-              <span>Plumbing</span>
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>1 Bedroom</span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>1 Comfort Room</span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>Living Room</span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>Dining Area</span>
             </div>
           </div>
         </div>
-        <a><div class="cancellation">
-          Request Cancellation
+        <a><div class="function">
+          Make Reservation
           </div></a>
-          <a><div class="cancellation">
-            Request Cancellation
+          <a><div class="function">
+            Set Visiting Appointment
             </div></a>
-        <div class="shipping-desc">Your Address</div>
-        
-        <div class="shipping-address">
+        <div class="other-desc">Dormitory Address</div>
+        <div class="other-address">
           Red Bldg.<br>
           Universe 2, Golden Country Homes<br>
           Alangilan<br>
@@ -80,8 +80,18 @@
         </div>
         </div>
       </div>
-
+      
     </div>
   </div>
   <script src="node_modules/animejs/lib/anime.min.js"></script>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div id="guide">
+      <a><ion-icon name="map" size="large" color="dark"></ion-icon></a>
+      <a><ion-icon name="home" size="large" color="dark"></ion-icon></a>
+      <a><ion-icon name="person-circle" size="large" color="dark"></ion-icon></a>
+    </div>
+  </ion-toolbar>
+</ion-footer>
