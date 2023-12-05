@@ -1,0 +1,41 @@
+.drawer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.open {
+  transform: translateY(-70%);
+}
+
+.content {
+  height: 100%;
+}
+
+.drawer {
+  background-color: #fff;
+  box-shadow: 0px -5px 5px -5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 70%;
+}
+
+.drawer-content {
+  padding: 16px;
+}
+
+.drawer-handle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  cursor: pointer;
+  background-color: #eee;
+}

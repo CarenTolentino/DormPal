@@ -36,6 +36,7 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
+  
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
@@ -46,8 +47,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/create/create.module').then( m => m.CreatePageModule)
   },
   {
+    path: 'dashboard',
+    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
     path: 'dorm',
     loadChildren: () => import('./pages/dorm/dorm.module').then( m => m.DormPageModule)
+  },
+  {
+    path: 'dormprofile',
+    loadChildren: () => import('./pages/dormprofile/dormprofile.module').then( m => m.DormprofilePageModule)
   },
 
 ];

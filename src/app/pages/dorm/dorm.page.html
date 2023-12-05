@@ -1,38 +1,97 @@
-<ion-header>
-    <ion-toolbar color="primary">
-        <ion-title>Ionic Swiper</ion-title>
-        <ion-buttons slot="end">
-            <ion-button (click)="goPrev()">
-                <ion-con slot="icon-only" name="arrow-back"></ion-con>
-            </ion-button>
-            <ion-button (click)="goNext()">
-                <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
-            </ion-button>
-            <ion-button (click)="goNext()">
-                <ion-icon slot="icon-only" name="arrow"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
-
-<ion-content scrollY="false">
-    <swiper-container
-    #swiper
-        (afterinit)="swiperReady()"
-        (slidechange)="swiperSlideChanged($event)"
-        [loop]="true"
-        [pagination]="true"
-        [zoom]="true"
-        style="height: 35vh;"
-    >
-        <swiper-slide *ngFor="let image of images">
-            <div class="swiper-zoom-container">
-                <img [src]="image" />
+<ion-content>
+  <div class="container">
+    <div class="iphone">
+      <div class="header">
+        <div class="order-summary">
+          <div class="dorm-name">
+            TONTON's INN
+          </div>
+          <div class="short-desc">
+            of Oliver Luis Aromin
+          </div>
+        </div>
+        <div class="action-btn">
+          <div class="back-btn"><ion-icon name="close-outline"></ion-icon></div>
+        </div>
+      </div>
+      <div class="hero-img-container">
+        <!--Input an Image here, I already remove the swiper element-->
+        <img src="./assets/cadena_b.png" class="hero-img" alt="">
+      </div>
+      <div class="dorm-details-container">
+        <div class="ddc-header">
+        <div class="cta-text">See dormitory details</div>
+        <div class="cta-button-container">
+          <button class="cta-button">View</button>
+        </div>
+        </div>
+        <div class="ddc-wrapper">
+        <div class="ddc-header-line">
+          Dormitory Details
+        </div>
+        <div class="ddc-header-details">
+          Features
+        </div>
+        <div class="details-container">
+          <div class="details">
+            <div class="details-desc">
+              <span>Details and Utilities</span>
+              <span>Single-Storey </span>
             </div>
-         </swiper-slide>
-    </swiper-container>
-
-    <h1>TOMTOM'S INN</h1>
-
-
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>Kitchen</span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>1 Bedroom</span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>1 Comfort Room</span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>Living Room</span>
+            </div>
+          </div>
+          <div class="details">
+            <div class="details-desc">
+              <span>Dining Area</span>
+            </div>
+          </div>
+        </div>
+        <a><div class="function">
+          Make Reservation
+          </div></a>
+          <a><div class="function">
+            Set Visiting Appointment
+            </div></a>
+        <div class="other-desc">Dormitory Address</div>
+        <div class="other-address">
+          Red Bldg.<br>
+          Universe 2, Golden Country Homes<br>
+          Alangilan<br>
+          BATANGAS
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script src="node_modules/animejs/lib/anime.min.js"></script>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div id="guide">
+      <a><ion-icon name="map" size="large" color="dark"></ion-icon></a>
+      <a><ion-icon name="home" size="large" color="dark"></ion-icon></a>
+      <a><ion-icon name="person-circle" size="large" color="dark"></ion-icon></a>
+    </div>
+  </ion-toolbar>
+</ion-footer>

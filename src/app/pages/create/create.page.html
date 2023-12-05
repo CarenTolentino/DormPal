@@ -8,7 +8,7 @@
   
   
     <div class="container">
-      <strong>Dorm name</strong>
+      <p>Dorm name</p>
       <ion-item class="round-input" color="dark">
         <ion-input 
         aria-label="Dorm Name" 
@@ -22,6 +22,35 @@
         type="alphanumerical" >
         </ion-input>
       </ion-item>
+    </div>
+
+    <div id="map">
+      <p>Set Location <ion-icon name="map-outline"></ion-icon> </p>
+    </div>
+    
+    <div class="container-2">
+      <p> <span>Utilities</span> Separate Utilities with a comma (,)</p>
+      <ion-item class="round-input-2" color="dark">
+        <ion-input 
+        aria-label="Address" 
+        type="alphanumerical" >
+        </ion-input>
+      </ion-item>
+    </div>
+
+    <div class="container-3">
+      <p>Images</p>
+      <ion-card>
+        <ion-card-content>
+          <input type="file" (change)="onFilesSelected($event)" accept="image/*" multiple>
+          <div class="image-container">
+            <img *ngIf="selectedImages.length > 0" [src]="selectedImages[0]" alt="Selected Image 1" class="half-width">
+            <div *ngIf="selectedImages.length > 1" class="column">
+              <img *ngFor="let image of selectedImages.slice(1, 3)" [src]="image" alt="Selected Image" class="full-width">
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
     </div>
   </ion-content>
   
