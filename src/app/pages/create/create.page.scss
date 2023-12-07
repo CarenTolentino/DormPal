@@ -154,10 +154,11 @@ ion-card {
   img{
     position: absolute;
     height: auto;
-    width: 8%;
+    width: 40px;
     margin-top: 24vw;
+    margin-left: -20px;
+    left: 50%;
     display: block;
-    margin-left: 46%;
     z-index: 2;
   }
   
@@ -169,3 +170,4 @@ ion-card {
   z-index: 1;
 }
 }
+
