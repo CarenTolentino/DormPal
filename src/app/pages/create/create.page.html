@@ -6,34 +6,38 @@
     </ion-buttons>
   </ion-header>
   
-  
+  <form [formGroup] = "dormCreate" (ngSubmit) = "dormCreateSubmit()" novalidate>
     <div class="container">
       <p>Dorm name</p>
       <ion-item class="round-input" color="dark">
-        <ion-input 
+        <ion-input  formControlName = "dormname"
         aria-label="Dorm Name" 
-        type="alphanumerical" >
+        type="text" >
         </ion-input>
       </ion-item>
       <p> Address </p> 
-      <ion-item class="round-input-2" color="dark">
-        <ion-input 
+      <ion-item class="round-input" color="dark">
+        <ion-input formControlName = "dormaddress"
         aria-label="Address" 
-        type="alphanumerical" >
+        type="text" >
         </ion-input>
       </ion-item>
     </div>
 
-    <div id="map">
+    <div id="setlocation">
       <p>Set Location <ion-icon name="map-outline"></ion-icon> </p>
+    </div>
+    <div id ="mapDiv">
+      <img src="assets\icon\Marker.png">
+      <div id="map" #map></div>
     </div>
     
     <div class="container-2">
       <p> <span>Utilities</span> Separate Utilities with a comma (,)</p>
-      <ion-item class="round-input-2" color="dark">
-        <ion-input 
+      <ion-item class="round-input" color="dark">
+        <ion-input formControlName = "dormutilities"
         aria-label="Address" 
-        type="alphanumerical" >
+        type="text" >
         </ion-input>
       </ion-item>
     </div>
@@ -52,5 +56,10 @@
         </ion-card-content>
       </ion-card>
     </div>
-  </ion-content>
+
+    <div class = "btn">
+      <button type="submit">Create Dorm</button>
+    </div>
+  </form>
+</ion-content>
   
