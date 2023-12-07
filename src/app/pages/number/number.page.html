@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-buttons slot="start" class="back-button">
-    <ion-back-button defaultHref="/" color="light"></ion-back-button>
+    <ion-back-button defaultHref="profile" color="light"></ion-back-button>
   </ion-buttons>
 </ion-header>
 
@@ -11,12 +11,23 @@
       <ion-icon name="call-outline"></ion-icon>
       <ion-input 
       aria-label="Phone number" 
+      type="tel"
+      placeholder="Phone Number"
+      maxlength="11">
+      </ion-input>
+    </ion-item>
+    <strong>Enter New Phone Number</strong>
+    <ion-item class="round-input" color="dark">
+      <ion-icon name="call-outline"></ion-icon>
+      <ion-input 
+      aria-label="Phone number" 
       type="tel" 
-      placeholder="Phone Number">
+      placeholder="New Phone Number"
+      maxlength="11">
       </ion-input>
     </ion-item>
     <ion-button shape="round" color="primary">
-      Submit
+      Save
     </ion-button>
   </div>
 </ion-content>

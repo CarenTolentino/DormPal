@@ -16,20 +16,23 @@
   </div>
 
   <div class="container-3">
-    <a (click)="goToCreate()">
-    <div>
-      <ion-icon name="add-circle-outline"></ion-icon>
-      <p>Add a Dorm</p>
+    <div class="holder">
+      <a (click)="goToCreate()">
+      <div>
+        <ion-icon name="add-circle-outline"></ion-icon>
+        <p>Add a Dorm</p>
+      </div>
+      </a>
     </div>
-    </a>
   </div>
+  
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
     <div id="guide">
-      <a><ion-icon name="clipboard-sharp" size="large" color="primary"></ion-icon></a>
-      <a (click)="goToProfile()"><ion-icon name="person-circle" size="large" color="primary"></ion-icon></a>
+      <a><ion-icon name="clipboard-sharp" size="large" color="dark"></ion-icon></a>
+      <a (click)="goToProfile()"><ion-icon name="person-circle" size="large" color="dark"></ion-icon></a>
     </div>
   </ion-toolbar>
 </ion-footer>
