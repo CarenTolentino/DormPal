@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'number',
-    loadChildren: () => import('./forgotpass/number/number.module').then( m => m.NumberPageModule)
+    loadChildren: () => import('./pages/number/number.module').then( m => m.NumberPageModule)
   },
   {
     path: 'code',
@@ -30,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: 'change',
-    loadChildren: () => import('./forgotpass/change/change.module').then( m => m.ChangePageModule)
+    loadChildren: () => import('./pages/change/change.module').then( m => m.ChangePageModule)
   },
   {
     path: 'profile',
