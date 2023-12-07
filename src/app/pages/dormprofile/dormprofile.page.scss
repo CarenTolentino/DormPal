@@ -1,0 +1,151 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+.header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+     background-color: #87E2EC;
+  
+}
+ion-icon{
+    margin-left: 20px;
+    color: rgb(79, 79, 79);
+    font-size: 30px;
+
+}
+
+.container2{
+    padding: .5rem 0rem;
+    padding-top: 1.5vh;
+  
+  }
+
+  .images-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.dorm-title{
+  margin-top: 0;
+  border-bottom: 1px solid #87E2EC;
+}
+
+.dorm-title strong{
+  margin-left: 30px;
+  font-size: 1.5rem;
+}
+.dorm-title p{
+  margin-left: 30px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: .7rem;
+}
+.details-util{
+  margin-top: 20px;
+}
+.dau-container {
+  background-color: #87E2EC;
+  width: 40%;
+  margin-left: 30px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+.dau-container strong{
+  font-size: .9rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+.dau-deets{
+  align-items: center;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.dau-deets p{
+  margin-left: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.details{
+  margin: 10px;
+}
+.landlord{
+  margin: 0 30px;
+}
+.landlord-title strong{
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+.landlord-container{
+  background-color: #87E2EC;
+  border-radius: 10px;
+  height: 90px;
+  padding: 10px;
+  display: flex;
+
+  align-items: center;
+}
+.landlord-details{
+  margin-left: 20px;
+  flex: 1;
+
+  h3{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  p{
+    margin: 0;
+    font-size: 11px;
+    font-weight: 500;
+  }
+}
+.l-image{
+  height: 70px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.landlord-image{
+  width: 10%;
+}
+.button {
+  margin: 0 30px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.function {
+  flex: 1; 
+  margin: 7px; 
+  background-color: #04BED4;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+ion-footer {
+  position: fixed;
+  bottom: 0;
+}
+
+#guide {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #87E2EC;
+}

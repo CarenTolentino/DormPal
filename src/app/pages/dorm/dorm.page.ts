@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import Swiper from 'swiper';
 import anime from 'animejs/lib/anime.es.js';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dorm',
@@ -14,35 +15,21 @@ export class DormPage implements OnInit, AfterViewInit {
   slidedown: any;
   slideup: any;
 
-  @ViewChild('swiperContainer') swiperRef: ElementRef | undefined;
-
-
+  @ViewChild('swiper') swiperRef: ElementRef | undefined;
   swiper?: Swiper;
 
-  images = [
-    '../assets/cadena_b.png',
-    '../assets/DSC09584.png',
-    '../assets/DSC09582.png'
-  ];
+
+
+
+
 
   ngOnInit() {}
   swiperReady() {
-    // Initialize Swiper when the view is ready
-    this.swiper = new Swiper('.swiper-container', {
-      // Swiper configuration options
-      // You can customize these options based on your needs
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  } 
+    this.swiper = this.swiperRef?.nativeElement.swiper;
+  }
+  swiperSlideChanged(e: any) {
+    console.log('changed: ', e);
+  }
   ngAfterViewInit() {
     this.initSwiper();
 
@@ -86,7 +73,7 @@ export class DormPage implements OnInit, AfterViewInit {
     });
 
     this.slidedown = anime({
-      targets: '.order-details-container',
+      targets: '.dorm-details-container',
       translateY: ['-200', '0px'],
       duration: 1000,
       autoplay: false,
@@ -97,7 +84,7 @@ export class DormPage implements OnInit, AfterViewInit {
     });
 
     this.slideup = anime({
-      targets: '.order-details-container',
+      targets: '.dorm-details-container',
       translateY: ['-0px', '-200px'],
       autoplay: false,
       begin: () => {
