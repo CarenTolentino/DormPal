@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { GoogleMap, Marker } from '@capacitor/google-maps';
 import { Geolocation } from '@capacitor/geolocation';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { userService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-map',
@@ -20,6 +21,11 @@ export class MapPage implements OnInit {
 
   ngOnInit() {
     this.createMap()
+    if (userService.UID == "no user") this.router.navigate(['login'])
+  }
+
+  ionViewDidEnter(){
+    if (userService.UID == "no user") this.router.navigate(['login'])
   }
 
   @ViewChild('map')

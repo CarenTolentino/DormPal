@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { userService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,6 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
+
+  fname:string
+  lname:string
+  usertype:string
 
   constructor(private router: Router) { }
 
@@ -26,7 +31,16 @@ export class ProfilePage implements OnInit {
     this.router.navigate(['map'])
   }
 
-  ngOnInit() {
+  ionViewDidEnter() {
+    if (userService.UID == "no user") this.router.navigate(['login'])
+    else{
+      this.fname = userService.fname
+      this.lname = userService.lname
+      this.usertype = userService.usertype
+    }
   }
 
+  ngOnInit() {
+
+  }
 }

@@ -58,26 +58,19 @@ export class LoginPage implements AfterViewInit {
         if(response == 'l02') this.presentAlert("ERROR","Incorrect Password.")
         else if(response == 'l03') this.presentAlert("ERROR","User not Found.")
         else{
-          const row = response as Array<any>
-          console.log(row)
+        const row = response as any
+        console.log(row)
+        userService.pushData({
+          UID: row.UID,
+          fname: row.fname,
+          lname: row.lname,
+          usertype: row.usertype
+        })
+        if (row.usertype == 'tenant') this.router.navigate(['map'])
+        if (row.usertype == 'landlord') this.router.navigate(['dashboard'])
         }
       }
     })
-
-    // this.httpClient.post('https://dormpal.000webhostapp.com/login.php', data, {headers: headers}).subscribe((res) => {
-    //   console.log("Posted successfully")
-    //   console.log(res);
-    // }, (err) => {
-    //   console.log(err.error);
-    // });
-    
-    // console.log(this.login.value)
-    // this.httpClient.post('https://dormpal.000webhostapp.com/login.php ', data).subscribe((res) => {
-    //   console.log("Posted successfully")
-    //   console.log(res);
-    // }, (err) => {
-    //   console.log(err.error);
-    // })
   }
 
   register() {
