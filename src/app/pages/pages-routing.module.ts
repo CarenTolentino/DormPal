@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'dormprofile',
     loadChildren: () => import('./dormprofile/dormprofile.module').then( m => m.DormprofilePageModule)
   },
+  {
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
+  },
 
   
 
