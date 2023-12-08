@@ -59,7 +59,6 @@ export class LoginPage implements AfterViewInit {
         else if(response == 'l03') this.presentAlert("ERROR","User not Found.")
         else{
         const row = response as any
-        console.log(row)
         userService.pushData({
           UID: row.UID,
           fname: row.fname,

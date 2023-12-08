@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import { GoogleMap, Marker } from '@capacitor/google-maps';
 import { Geolocation } from '@capacitor/geolocation';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { userService } from 'src/app/services/user.service';
+import { userService } from 'src/app/services/user.service'; 
+import { dormService} from 'src/app/services/dorm.service';
 
 @Component({
   selector: 'app-map',
@@ -49,7 +50,7 @@ export class MapPage implements OnInit {
         disableDefaultUI: true, // a way to quickly hide all controls
         scaleControl: true,
         zoomControl: true,
-        zoom: 15,
+        zoom: 16,
         mapId: 'c7128929d247ddf2'
       },
     })
@@ -72,7 +73,8 @@ export class MapPage implements OnInit {
         })
       })
       this.newMap.setOnMarkerClickListener(async(marker) => {
-        console.log("Dorm ID for marker: "+marker.title)
+        dormService.selecteddormID = marker.title
+        this.router.navigate(['dormprofile'])
       })
     })
 
