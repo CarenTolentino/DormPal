@@ -7,7 +7,8 @@ const routes: Routes = [
   {
     path: '',
     component: PagesPage
-  },  {
+  },
+  {
     path: 'dormprofile',
     loadChildren: () => import('./dormprofile/dormprofile.module').then( m => m.DormprofilePageModule)
   },

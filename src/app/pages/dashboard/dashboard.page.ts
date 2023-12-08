@@ -32,6 +32,10 @@ export class DashboardPage implements OnInit {
     this.router.navigate(['profile'])
   }
 
+  goToDashboard() {
+    this.router.navigate(['dashboard'])
+  }
+
   ngOnInit() {
   }
 

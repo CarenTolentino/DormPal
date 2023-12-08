@@ -1,5 +1,6 @@
 *{
   font-family: 'Poppins', sans-serif;
+  color: black;
 }
 .header {
     position: relative;
@@ -16,6 +17,10 @@ ion-icon{
     color: rgb(79, 79, 79);
     font-size: 30px;
 
+}
+
+ion-content {
+  --ion-background-color: linear-gradient(to bottom, #B0E7EE, #ffffff);
 }
 
 .container2{
@@ -145,7 +150,7 @@ ion-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
   background-color: #40c2d3;
 }

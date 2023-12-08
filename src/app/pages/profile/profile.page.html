@@ -1,8 +1,5 @@
 <ion-content>
   <div class="main_content_div">
-    <ion-buttons slot="start" class="back-button">
-      <ion-back-button defaultHref="/" color="light"></ion-back-button>
-    </ion-buttons>
 
     <div class="user_div">
       <div class="first_div">
@@ -16,20 +13,26 @@
     <div class="content_div">
       <div class="test_details">
 
-        <div class="list_div">
-          <ion-label>Edit Profile</ion-label>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </div>
+        <a (click)="goToEditName()">
+          <div class="list_div">
+            <ion-label>Edit Profile</ion-label>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </a>
+       
+        <a (click)="goToChangePassword()">
+          <div class="list_div">
+            <ion-label>Change Password</ion-label>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </a>
 
-        <div class="list_div">
-          <ion-label>Change Password</ion-label>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </div>
-
-        <div class="list_div">
-          <ion-label>Change Number</ion-label>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </div>
+        <a (click)="goToChangeNumber()">
+          <div class="list_div">
+            <ion-label>Change Number</ion-label>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </a>
 
         <div class="list_div">
           <ion-label>About</ion-label>
@@ -49,7 +52,6 @@
   <ion-toolbar>
     <div id="guide">
       <a><ion-icon name="map" size="large" color="dark"></ion-icon></a>
-      <a><ion-icon name="home" size="large" color="dark"></ion-icon></a>
       <a><ion-icon name="person-circle" size="large" color="dark"></ion-icon></a>
     </div>
   </ion-toolbar>

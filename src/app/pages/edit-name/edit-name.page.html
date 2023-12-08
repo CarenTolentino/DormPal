@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-buttons slot="start" class="back-button">
+    <ion-back-button defaultHref="profile" color="light"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <strong>Edit Name</strong>
+    <ion-item class="round-input" color="dark">
+      <ion-icon name="person-circle" size="large"></ion-icon>
+      <ion-input 
+      aria-label="New Name" 
+      type="alphanumeric" 
+      placeholder="New Name">
+      </ion-input>
+    </ion-item>
+    <ion-button shape="round" color="primary">
+      Confirm
+    </ion-button>
+  </div>
+</ion-content>

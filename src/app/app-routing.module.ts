@@ -58,6 +58,10 @@ const routes: Routes = [
     path: 'dormprofile',
     loadChildren: () => import('./pages/dormprofile/dormprofile.module').then( m => m.DormprofilePageModule)
   },
+  {
+    path: 'edit-name',
+    loadChildren: () => import('./pages/edit-name/edit-name.module').then( m => m.EditNamePageModule)
+  },
 
 ];
 
