@@ -1,13 +1,14 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: "Poppins-Regular", sans-serif;
 }
 
-ion-content,
-input,
-.btn {
-  font-family: "Poppins-Regular", sans-serif;
+ion-content{
+  --background: none;
+  background-image: linear-gradient(#BABCEF, #B9BCFD);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
 }
 
 .container {
