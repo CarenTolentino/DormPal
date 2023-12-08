@@ -28,8 +28,8 @@ export class DashboardPage implements OnInit {
     this.router.navigate(['create'])
   }
 
-  goToProfile() {
-    this.router.navigate(['profile'])
+  goToLLProfile() {
+    this.router.navigate(['llprofile'])
   }
 
   goToDashboard() {
