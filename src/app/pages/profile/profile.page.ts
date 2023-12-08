@@ -22,6 +22,10 @@ export class ProfilePage implements OnInit {
     this.router.navigate(['number'])
   }
 
+  goToMap(){
+    this.router.navigate(['map'])
+  }
+
   ngOnInit() {
   }
 

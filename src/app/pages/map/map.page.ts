@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
+import { Router } from '@angular/router';
 import { GoogleMap, Marker } from '@capacitor/google-maps';
 import { Geolocation } from '@capacitor/geolocation';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -15,7 +16,7 @@ export class MapPage implements OnInit {
   latitude:number = 13.781903599860783;
   longitude:number = 121.06918362277806;
 
-  constructor(private httpClient:HttpClient){}
+  constructor(private httpClient:HttpClient, private router:Router){}
 
   ngOnInit() {
     this.createMap()
@@ -71,4 +72,8 @@ export class MapPage implements OnInit {
 
   }
 
+
+  goToProfile(){
+    this.router.navigate(['profile'])
+  }
 }

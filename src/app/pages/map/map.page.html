@@ -2,5 +2,14 @@
   <div class="container">
     <ion-searchbar show-clear-button="focus" show-cancel-button="focus"></ion-searchbar>
     <div id="map" #map></div>
+      <ion-toolbar>
+        <div id="guide">
+          <a><ion-icon name="map" size="large" color="dark"></ion-icon></a>
+          <a (click)="goToProfile()"><ion-icon name="person-circle" size="large" color="dark"></ion-icon></a>
+        </div>
+      </ion-toolbar>
   </div>
 </ion-content>
+
+
+

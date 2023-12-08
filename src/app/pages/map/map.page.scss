@@ -28,3 +28,20 @@ ion-content {
     height: 100%;
   }
 
+  ion-footer {
+    position: fixed;
+    bottom: 0;
+    border-color: none;
+  }
+  
+  #guide {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #40c2d3;
+  }
+  
