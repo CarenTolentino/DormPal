@@ -11,27 +11,10 @@ input,
 }
 
 .container {
-  position: relative;
-  width: 100%;
-  background-color: white;
-  overflow: hidden;
-}
-
-.forms-container {
   background-image: linear-gradient(#75E4F2, #B0E7EE);
-  position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.signin-signup {
-  position: absolute;
-  top: 50%;
-  left: 75%;
-  width: 50%;
-  display: grid;
+  overflow: hidden;
 }
 
 form {
@@ -58,26 +41,15 @@ form {
   display: flex;
 }
 
-.name{
-  align-items: center;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  transition: all 0.2s 0.7s;
-  overflow: hidden;
-
-
-}
-.half-width {
-  width: 43%;
-  margin: 0px 5px;
-  padding: 0px 30px;
-  margin-bottom: 10px;
-
-
-}
 .image1{
-  margin-top: -0%;
+  margin-top: 60px;
+  transition: all 0.2s 0.7s;
+  
+  width: 240px;
+  height: auto;
+  @media (max-width: 768px) {
+    margin-top: 200px;
+  }
 }
 
 .input-field ion-icon {
@@ -106,35 +78,6 @@ form {
   font-size: 1.1rem;
   color: #333;
   opacity: 50%;
-}
-select {
-  
-  padding: 10px;
-  font-size: 16px;
-  border: transparent;
-  border-radius: 5px;
-  background-color: transparent;
-  width: 100%;
-  cursor: pointer;
-}
-select::after {
-  content: '\25BC'; /* Unicode character for down arrow */
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.input-field input::placeholder {
-  color: #aaa;
-  font-weight: 500;
-}
-
-.sign-in-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .title {
@@ -165,125 +108,20 @@ select::after {
   border-color: #04BED4;
 }
 
-@media (max-width: 870px) {
-  .container {
-    height: 100vh;
-  }
-  .signin-signup {
-    width: 100%;
-    top: 95%;
-    transform: translate(-50%, -100%);
-    transition: 1s 0.8s ease-in-out;
-  }
-  .signin-signup,
-  .container.sign-up-mode .signin-signup {
-    left: 50%;
-  }
-  .panels-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
-  }
-  .panel {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2.5rem 8%;
-    grid-column: 1 / 2;
-  }
-  .right-panel {
-    grid-row: 3 / 4;
-  }
-  .left-panel {
-    grid-row: 1 / 2;
-  }
-  .image3 {
-    width: 200px;
-    transition: transform 0.9s ease-in-out;
-    transition-delay: 0.6s;
-  }
-  .panel .content {
-    padding-right: 15%;
-    transition: transform 0.9s ease-in-out;
-    transition-delay: 0.8s;
-  }
-  .panel h3 {
-    font-size: 1.2rem;
-  }
-  .panel p {
-    font-size: 0.7rem;
-    padding: 0.5rem 0;
-    font-family: 'Poppins-Regular';
-  }
-  .btn.transparent {
-    width: 110px;
-    height: 35px;
-    font-size: 0.7rem;
-  }
-  .container:before {
-    width: 1500px;
-    height: 1500px;
-    transform: translateX(-50%);
-    left: 30%;
-    bottom: 68%;
-    right: initial;
-    top: initial;
-    transition: 2s ease-in-out;
-  }
-  .container.sign-up-mode:before {
-    transform: translate(-50%, 100%);
-    bottom: 32%;
-    right: initial;
-  }
-  .container.sign-up-mode .left-panel .image3,
-  .container.sign-up-mode .left-panel .content {
-    transform: translateY(-300px);
-  }
-  .container.sign-up-mode .right-panel .image3,
-  .container.sign-up-mode .right-panel .content {
-    transform: translateY(0px);
-  }
-  .right-panel .image3,
-  .right-panel .content {
-    transform: translateY(300px);
-  }
-  .container.sign-up-mode .signin-signup {
-    top: 5%;
-    transform: translate(-50%, 0);
-  }
+
+.container {
+  height: 100vh;
 }
+
+.btn.transparent {
+  width: 110px;
+  height: 35px;
+  font-size: 0.7rem;
+}
+
 
 @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
-  }
-
-}
-/* Add these styles for the animated bubbles */
-.bubble-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.bubble {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  animation: moveBubble linear infinite;
-}
-
-@keyframes moveBubble {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(-50vh) translateX(20vw);
-  }
-  100% {
-    transform: translateY(0) translateX(0);
   }
 }

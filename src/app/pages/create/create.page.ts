@@ -33,7 +33,7 @@ export class CreatePage implements OnInit {
 
   constructor(private router: Router, public formBuilder: FormBuilder, public photoService: PhotoService, private httpClient: HttpClient, private alertController:AlertController){
     this.dormCreate = this.formBuilder.group({
-      landlordID:[''],
+      landlordID:['5'],
       dormname:[''],
       dormaddress:[''],
       dormlng:[''],
@@ -118,9 +118,10 @@ export class CreatePage implements OnInit {
     headers.set('Access-Control-Allow-Origin', '*');
     headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
 
-    // this.httpClient.post('https://dormpal.000webhostapp.com/createdorm.php', data, {headers: headers}).subscribe((response) => {
-    //   if(response == 'c01') this.presentAlert("ERROR","Missing Parameters")
-    //   if(response == 'c02') this.presentAlert("Success","Successfully Created Dorm Page")
-    // })
+    this.httpClient.post('https://dormpal.000webhostapp.com/createdorm.php', data, {headers: headers}).subscribe((response) => {
+      if(response == 'c01') this.presentAlert("ERROR","Missing Parameters")
+      if(response == 'c02') this.presentAlert("Success","Successfully Created Dorm Page")
+    })
   }
 }
+
