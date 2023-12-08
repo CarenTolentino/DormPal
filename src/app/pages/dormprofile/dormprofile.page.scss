@@ -2,21 +2,9 @@
   font-family: 'Poppins', sans-serif;
   color: black;
 }
-.header {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10%;
-     background-color: #87E2EC;
-  
-}
-ion-icon{
-    margin-left: 20px;
-    color: rgb(79, 79, 79);
-    font-size: 30px;
 
+ion-header {
+  background-color: #1dc3d9;
 }
 
 ion-content {
@@ -122,7 +110,7 @@ ion-content {
 .landlord-image{
   width: 10%;
 }
-.button {
+.button-container {
   margin: 0 30px;
   display: flex;
   justify-content: space-between; 
@@ -153,4 +141,9 @@ ion-footer {
   padding-left: 100px;
   padding-right: 100px;
   background-color: #40c2d3;
+}
+
+ion-content {
+  max-height: calc(100vh - 55px);
+  overflow-y: scroll;
 }

@@ -1,8 +1,10 @@
 
 <ion-content [fullscreen]="true">
-  <div class="header">
-    <ion-icon name="arrow-back-outline"></ion-icon>
-  </div>
+  <ion-header [translucent]="true">
+    <ion-buttons slot="start" class="back-button">
+      <ion-back-button defaultHref="/" color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-header>
   <div class="images">
     <div class="container2">
       <app-slider></app-slider>
@@ -41,7 +43,7 @@
         </div>
       </div>
     </div>  
-    <div class="button">
+    <div class="button-container">
       <a><div class="function"> Make Reservation</div></a>
       <a><div class="function"> Set Appointment</div></a>
     </div>
@@ -52,7 +54,7 @@
   <ion-toolbar>
   <div id="guide">
     <a><ion-icon name="map" size="large" color="dark"></ion-icon></a>
-    <a><ion-icon name="person-circle" size="large" color="dark"></ion-icon></a>
+    <a (click)="goToProfile()"><ion-icon name="person-circle" size="large" color="dark"></ion-icon></a>
   </div>
-</ion-toolbar>
+  </ion-toolbar>
 </ion-footer>

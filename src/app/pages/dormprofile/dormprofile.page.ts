@@ -21,6 +21,11 @@ export class DormprofilePage implements OnInit {
     this.router.navigateByUrl('/tabs/voucher');
   }
 
+  goToProfile() {
+    this.router.navigate(['profile'])
+  }
+
+
 
   ngOnInit() {
   }
