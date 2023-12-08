@@ -137,3 +137,7 @@ ion-footer {
   background-color: #40c2d3;
 }
 
+ion-content {
+  max-height: calc(100vh - 55px);
+  overflow-y: scroll;
+}
