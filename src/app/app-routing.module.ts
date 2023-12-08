@@ -59,6 +59,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/dormprofile/dormprofile.module').then( m => m.DormprofilePageModule)
   },
   {
+    path: 'map',
+    loadChildren: () => import('./pages/map/map.module').then( m => m.MapPageModule)
+  },
+  {
     path: 'edit-name',
     loadChildren: () => import('./pages/edit-name/edit-name.module').then( m => m.EditNamePageModule)
   },

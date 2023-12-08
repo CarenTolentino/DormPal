@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
+import { userService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -55,12 +56,13 @@ export class LoginPage implements AfterViewInit {
     headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
 
     this.httpClient.post('https://dormpal.000webhostapp.com/login.php', data, {headers: headers}).subscribe((response) => {
-      console.log(response)
-      if(response == 'l01') {
-        this.presentAlert("Success","Successfully Signed Up!","Proceed to Log In")
+      if(response != null) {
+        if(response == 'l02') this.presentAlert("ERROR","Incorrect Password.")
+        if(response == 'l03') this.presentAlert("ERROR","User not Found.")
+        else{
+          console.log(response)
+        }
       }
-      if(response == 'l02') this.presentAlert("ERROR","Incorrect Password.")
-      if(response == 'l03') this.presentAlert("ERROR","User not Found.")
     })
 
     // this.httpClient.post('https://dormpal.000webhostapp.com/login.php', data, {headers: headers}).subscribe((res) => {
