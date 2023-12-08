@@ -51,10 +51,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
-    path: 'dorm',
-    loadChildren: () => import('./pages/dorm/dorm.module').then( m => m.DormPageModule)
-  },
-  {
     path: 'dormprofile',
     loadChildren: () => import('./pages/dormprofile/dormprofile.module').then( m => m.DormprofilePageModule)
   },
