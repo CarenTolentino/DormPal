@@ -14,6 +14,7 @@ import { PhotoService, UserPhoto } from '../../services/photo.service';
 import { AlertController } from '@ionic/angular';
 
 import { Router } from '@angular/router';
+import { userService } from 'src/app/services/user.service';
 
 defineCustomElements(window);
 
@@ -111,16 +112,21 @@ export class CreatePage implements OnInit {
 
     var data = (JSON.stringify(this.dormCreate.value))
 
-    console.log(data)
-
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json; charset=UTF-8');
     headers.set('Access-Control-Allow-Origin', '*');
     headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    this.httpClient.post('https://dormpal.000webhostapp.com/getllid.php', ('{"UID": ' + userService.UID + '}'), {headers: headers}).subscribe((response) => {  
+      const row = response as any
+      this.dormCreate.patchValue({
+        landlordID:[row['landlordID']]
+      })
+  })
 
     this.httpClient.post('https://dormpal.000webhostapp.com/createdorm.php', data, {headers: headers}).subscribe((response) => {
       if(response == 'c01') this.presentAlert("ERROR","Missing Parameters")
       if(response == 'c02') this.presentAlert("Success","Successfully Created Dorm Page")
+      this.router.navigate(['dashboard'])
     })
   }
 }

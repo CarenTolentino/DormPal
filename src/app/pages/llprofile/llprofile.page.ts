@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { userService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-llprofile',
@@ -7,6 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./llprofile.page.scss'],
 })
 export class LlprofilePage implements OnInit {
+
+  fname:string
+  lname:string
 
   constructor(private router: Router) { }
 
@@ -22,10 +26,20 @@ export class LlprofilePage implements OnInit {
     this.router.navigate(['number'])
   }
 
-  goToDashboard() {
+  goToDashboard(){
     this.router.navigate(['dashboard'])
   }
-  ngOnInit() {
+
+  ionViewDidEnter() {
+    if (userService.UID == "no user") this.router.navigate(['login'])
+    else{
+      this.fname = userService.fname
+      this.lname = userService.lname
+
+    }
   }
 
+  ngOnInit() {
+
+  }
 }

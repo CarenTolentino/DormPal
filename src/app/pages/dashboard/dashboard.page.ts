@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ElementRef, ViewChild } from '@angular/core';
+import { userService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +9,8 @@ import { ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
+
+  fname:string
 
   @ViewChild('fileInput') fileInput!: ElementRef;
 
@@ -23,6 +26,14 @@ export class DashboardPage implements OnInit {
   }
 
   constructor(private router: Router) { }
+
+  ionViewDidEnter() {
+    if (userService.UID == "no user") this.router.navigate(['login'])
+    else{
+      this.fname = userService.fname
+   
+    }
+  }
 
   goToCreate() {
     this.router.navigate(['create'])

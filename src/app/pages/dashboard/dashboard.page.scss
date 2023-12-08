@@ -27,25 +27,20 @@ ion-card {
 }
 
 .container {
-  p {
-    font-size: 24px;
-    padding: 50px;
-    color: #1591a1;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-  }
-}
-
-.container {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  position: absolute;
   left: 0;
   right: 0;
   top: 5%;
-  transform: translateY(-50%);
+  p {
+    font-size: 24px;
+    padding: 5px;
+    color: #1591a1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
 }
 
 .container-2 {
@@ -53,11 +48,9 @@ ion-card {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  position: absolute;
+  align-self: center;
   left: 0;
   right: 0;
-  top: 30%;
-  transform: translateY(-50%);
 }
 
 .image-container {
@@ -93,13 +86,10 @@ ion-card {
 .container-3 {
   display: flex;
   flex-direction: column;
-  position: absolute;
   text-align: center;
   align-items: center;
   left: 0;
   right: 0;
-  top: 65%;
-  transform: translateY(-50%);
   width: 100%;
 }
 
