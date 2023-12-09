@@ -15,6 +15,36 @@ ion-card {
   width: 80%;
 }
 
+.image-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 220px; 
+  max-width: 600px;
+    h1 {
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+      color: #000000;
+      margin-top: 5px;
+    }
+    p {
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      color: #000000;
+    }
+}
+
+.full-width {
+  flex: 1;
+  max-width: 100%;
+  height: calc(50% - 10px); /* Adjust the margin value as needed */
+}
+
+
 #guide {
   height: 55px;
   display: flex;
@@ -53,34 +83,6 @@ ion-card {
   right: 0;
 }
 
-.image-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 220px; 
-  max-width: 600px;
-    h1 {
-      display: flex;
-      font-family: 'Poppins', sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-      color: #000000;
-      margin-top: 5px;
-    }
-    p {
-      display: flex;
-      font-family: 'Poppins', sans-serif;
-      font-weight: bold;
-      font-size: 12px;
-      color: #000000;
-    }
-}
-
-.full-width {
-  flex: 1;
-  max-width: 100%;
-  height: calc(50% - 10px); /* Adjust the margin value as needed */
-}
 
 
 .container-3 {

@@ -50,7 +50,7 @@ export class PhotoService {
     return {
       filepath: fileName,
       webviewPath: photo.webPath,
-      base64: base64Data.replace(/^(data\:image\/(png|jpg|jpeg);base64,)/,'')
+      base64: base64Data
     };
    }
 

@@ -27,10 +27,11 @@
     <div id="setlocation">
       <p>Set Location <ion-icon name="map-outline"></ion-icon> </p>
     </div>
-    <div id ="mapDiv">
+    <div id ="markerDiv">
       <img src="assets\icon\Marker.png">
-      <div id="map" #map></div>
     </div>
+    <div id="map" #map></div>
+
     
     <div class="container-2">
       <p> <span>Utilities</span> Separate Utilities with a comma (,)</p>
@@ -48,7 +49,6 @@
         <ion-grid>
           <ion-row>
             <ion-col size="4" *ngFor="let photo of photoService.photos; index as position"(click)="onImageClick(photo)">
-              (click)="onImageClick(photo)">
               <ion-img [src]="photo.webviewPath"></ion-img>
             </ion-col>
           </ion-row>

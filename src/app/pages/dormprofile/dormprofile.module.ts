@@ -7,8 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { DormprofilePageRoutingModule } from './dormprofile-routing.module';
 
 import { DormprofilePage } from './dormprofile.page';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 
 @NgModule({
   imports: [
@@ -17,6 +15,5 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     IonicModule,
     DormprofilePageRoutingModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class DormprofilePageModule {}

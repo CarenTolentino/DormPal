@@ -34,7 +34,7 @@ export class CreatePage implements OnInit {
 
   constructor(private router: Router, public formBuilder: FormBuilder, public photoService: PhotoService, private httpClient: HttpClient, private alertController:AlertController){
     this.dormCreate = this.formBuilder.group({
-      landlordID:['5'],
+      UID:[userService.UID],
       dormname:[''],
       dormaddress:[''],
       dormlng:[''],
@@ -116,18 +116,22 @@ export class CreatePage implements OnInit {
     headers.set('Content-Type', 'application/json; charset=UTF-8');
     headers.set('Access-Control-Allow-Origin', '*');
     headers.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
-    this.httpClient.post('https://dormpal.000webhostapp.com/getllid.php', ('{"UID": ' + userService.UID + '}'), {headers: headers}).subscribe((response) => {  
-      const row = response as any
-      this.dormCreate.patchValue({
-        landlordID:[row['landlordID']]
-      })
-  })
+  
+
+    console.log(data)
 
     this.httpClient.post('https://dormpal.000webhostapp.com/createdorm.php', data, {headers: headers}).subscribe((response) => {
       if(response == 'c01') this.presentAlert("ERROR","Missing Parameters")
-      if(response == 'c02') this.presentAlert("Success","Successfully Created Dorm Page")
-      this.router.navigate(['dashboard'])
+      else if(response == 'c02') {
+        this.presentAlert("Success","Successfully Created Dorm Page") 
+        this.router.navigate(['dashboard'])
+        this.photoService.photos.splice(0);
+      } else {
+        console.log(response)
+      }
     })
+
+    
   }
 }
 

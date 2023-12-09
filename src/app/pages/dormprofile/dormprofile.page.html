@@ -33,14 +33,9 @@
     </div>
     </div> 
     <div class="dau-deets">
-      <div class="details">
-        <p style="border-bottom: 1px solid #87E2EC;">Single-storey</p>
-        <p style="border-bottom: 1px solid #87E2EC;">Kitchen</p>
-        <p style="border-bottom: 1px solid #87E2EC;">1 Bedroom</p>
-        <p style="border-bottom: 1px solid #87E2EC;">1 Comfort Room</p>
-        <p style="border-bottom: 1px solid #87E2EC;">Living Room</p>
-        <p style="border-bottom: 1px solid #87E2EC;">Dining Area</p>
-      </div>
+    <ion-item *ngFor="let util of utils">
+      <ion-label>{{util.utility}}</ion-label>
+    </ion-item>
     </div> 
   </div>
 

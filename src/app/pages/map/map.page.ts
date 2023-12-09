@@ -22,10 +22,10 @@ export class MapPage implements OnInit {
 
   ngOnInit() {
     this.createMap()
-    if (userService.UID == "no user") this.router.navigate(['login'])
   }
 
   ionViewDidEnter(){
+    
     if (userService.UID == "no user") this.router.navigate(['login'])
   }
 

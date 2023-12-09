@@ -61,12 +61,7 @@ ion-content {
   margin-right: 70px;
 }
 .dau-deets p{
-  margin-left: 20px;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-.details{
-  margin: 10px;
+  margin: 10px 0px 0px 30px;
 }
 .landlord{
   margin: 0 30px;
@@ -136,4 +131,11 @@ ion-content {
 ion-content {
   max-height: calc(100vh - 55px);
   overflow-y: scroll;
+}
+
+ion-item{
+  --background: null;
+  ion-label{
+    font-family: 'Poppins', sans-serif;
+  }
 }

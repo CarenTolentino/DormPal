@@ -5,6 +5,7 @@ import { register } from 'swiper/element/bundle';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { dormService } from 'src/app/services/dorm.service';
+import { CommonModule } from '@angular/common';
 
 register();
 
@@ -13,12 +14,11 @@ register();
   templateUrl: './dormprofile.page.html',
   styleUrls: ['./dormprofile.page.scss'],
   standalone: true,  
-  imports: [IonicModule, SliderComponent,],
+  imports: [IonicModule, SliderComponent, CommonModule],
 })
 
 export class DormprofilePage implements OnInit {
-  slides: any[] = [];
-
+  utils: any = [];
   dormname:string
   dormaddress:string
   landlord:string
@@ -47,6 +47,11 @@ export class DormprofilePage implements OnInit {
       this.landlord = (row.fname + " " + row.lname)
       this.number = row.number
     })
+
+      this.httpClient.post('https://dormpal.000webhostapp.com/getutilitylist.php', ('{"DormID": ' + dormService.selecteddormID + '}'),{headers: headers}).subscribe((response) => {
+        console.log(response)
+        this.utils = response
+      })
   }
 
   ngOnInit() {

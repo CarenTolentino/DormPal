@@ -4,12 +4,22 @@
   </div>
 
   <div class="container-2">
-    <ion-card>
+    <!-- <ion-card>
       <ion-card-content>
         <div class="image-container">
             <img src="assets/cadena_b.png" alt="Selected Image" class="full-width">
             <h1>Oliver's Inn</h1>
             <p>Gen. Malvar St. Cuenca, Batangas</p>
+        </div>
+      </ion-card-content>
+    </ion-card> -->
+
+    <ion-card *ngFor="let card of cards" (click)="cardClicked(card.dormID)">
+      <ion-card-content>
+        <div class="image-container">
+            <img [src]="card.image" alt="Selected Image" class="full-width">
+            <h1>{{card.dormName}}</h1>
+            <p>{{card.dormAddress}}</p>
         </div>
       </ion-card-content>
     </ion-card>

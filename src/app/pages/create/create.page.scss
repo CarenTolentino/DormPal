@@ -150,24 +150,28 @@ ion-card {
   }
 }
 
-#mapDiv{
+#markerDiv{
+  padding-top: 30vw;
   img{
     position: absolute;
-    height: auto;
+    height: 40px;
     width: 40px;
-    margin-top: 24vw;
+    margin-top: -40px;
     margin-left: -20px;
+    margin-bottom: -20px;
     left: 50%;
     display: block;
     z-index: 2;
   }
   
+
+}
+
 #map {
   position: relative;
   margin:0% 10% 0% 10%;
+  margin-top: -30vw;
   height:60vw;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   z-index: 1;
 }
-}
-
